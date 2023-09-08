@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --primary-text-color: whitesmoke;
+    --secondary-text-color: #a0a0a0;
+    --primary-bg-color: #1e1e1e;
+    --secondary-bg-color: #2e2e2e;
+    --primary-border-color: #3e3e3e;
+    --secondary-border-color: #4e4e4e;
+    --primary-accent-color: #007acc;
+    --secondary-accent-color: #00aacc;
+    --primary-link-color: #007acc;
+    --secondary-link-color: #00aacc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fira Code", monospace;
+    line-height: 1.5rem;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
+
+p,
+span,
+li {
+    color: var(--secondary-text-color);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-link-color);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9rem;
+}
+
+#container--main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.section--page {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#name,
+#bio,
+#email {
+    margin: 2rem 0;
+}
+
+#bio,
+a {
+    font-weight: 300;
+}
+
+#name {
+    font-size: 3rem;
+    line-height: 1rem;
+}
+
+#email {
+    color: var(--primary-text-color);
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+#email:hover {
+    color: var(--primary-link-color);
+}
+
+#github--logo {
+    fill: var(--primary-text-color);
+}
+
+#profile--picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#socials--list {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#socials--list,
+a {
+    font-weight: 300;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+#socials--list a:hover {
+    font-weight: 100;
+    color: var(--primary-link-color);
+    font-size: 0.9rem;
+}
+
+#qualifications--list {
+    margin: 1.5rem 0;
+    list-style: none;
+}
+
+@media (max-width: 600px) {
+    #container--main {
+        padding: 0.5rem;
+    }
+
+    #wrapper--hero {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #profile--picture {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* #name {
+        font-size: 2rem;
+    } */
+
+    /* #email {
+        font-size: 0.8rem;
+    } */
+
+    #socials--list {
+        justify-content: center;
+    }
+
+    #socials--list a {
+        font-size: 0.8rem;
+    }
+}
