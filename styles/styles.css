@@ -1,12 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"); */
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/FiraCode-VariableFont_wght.ttf");
+}
 
 :root {
     --rgb-background: rgb(34, 33, 44);
     --rgb-comment: rgb(121, 112, 169);
     --rgb-selection: rgb(69, 65, 88);
     --rgb-foreground: rgb(248, 248, 242);
-    /* --rgb-foreground-alt: #bcc2cd; */
-    --rgb-foreground-alt: rgb(248, 248, 242);
+    --rgb-foreground-alt: rgb(188, 194, 205);
 
     --rgb-cyan: rgb(128, 255, 234);
     --rgb-green: rgb(138, 255, 128);
@@ -47,7 +51,7 @@ body {
     font-family: var(--default-font-family), sans-serif;
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
-    width: 100vw;
+    width: 100%;
     line-height: 1.5;
 }
 
@@ -58,6 +62,7 @@ body {
     gap: 4rem;
     padding: 2rem 0;
     /* background-color: var(--secondary-bg-color); */
+    /* box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15); */
 }
 
 .hero__avatar-container {
@@ -78,6 +83,7 @@ body {
 }
 
 .hero__details-name {
+    color: var(--rgb-purple);
     font-size: 3rem;
 }
 
@@ -107,24 +113,42 @@ body {
 
 .socials-container {
     padding: 1rem 0;
+    margin: 1rem 2rem;
     /* border: 1px solid yellow; */
 }
 
 .socials__link-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
     /* border: 1px solid green; */
 }
 
-.socials__link {
-    color: var(--primary-link-color);
+.socials__link-github {
+    display: flex;
+    font-size: 2.5rem;
     transition: var(--default-transition);
+    fill: var(--primary-link-color);
 }
 
-.socials__link:hover {
-    color: var(--secondary-link-color);
+.socials__link-github:hover {
+    fill: var(--secondary-link-color);
+}
+
+.socials__link-download {
+    background-color: #50fa7b;
+    color: #000;
+    padding: 10px 18px;
+    border-radius: var(--default-border-radius);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.socials__link-download:hover {
+    background-color: rgba(80, 250, 123, 0.8);
 }
 
 .skills-container {
@@ -235,6 +259,6 @@ body {
 
     .content-container {
         max-width: 100%;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
 }
