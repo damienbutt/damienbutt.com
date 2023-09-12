@@ -213,6 +213,12 @@ body {
     text-transform: uppercase;
 }
 
+.work-history__card-date-range {
+    color: var(--primary-text-color);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
 .work-history__card-details-container {
     display: flex;
     flex-direction: column;
